@@ -14,7 +14,7 @@ We'd like to:
 
 ## First Time
 
-- `git clone https://github.com/rogerjobs/interview-julian-mazo roger`
+- `git clone https://github.com/juanesarango/roger-project roger`
 - `cd roger/server`
 - `docker-compose build`
 - `docker-compose run -p '8000:8000' web /bin/bash`
