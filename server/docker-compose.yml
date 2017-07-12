@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+  web:
+    build: .
+    command: ./run
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    environment:
+      - ROGER_DATABASE_URL=postgresql://postgres@db/postgres
+      - RUN_IN_DEBUG=True
+    depends_on:
+      - db

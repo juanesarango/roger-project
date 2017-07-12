@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load mathfilters %}
+{% load render_bundle from webpack_loader %}
+
+{% block content %}
+
+<script type="text/javascript" id="state-script">
+  window._SITTERS_LIST = {{ sitters_json|safe }};
+</script>
+
+<div id="filter-react-app"></div>
+
+{% render_bundle 'commons' %}
+{% render_bundle 'filter' %}
+
+{% endblock content %}
+
+
+
+
+
